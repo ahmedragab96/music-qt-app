@@ -6,17 +6,140 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>938</width>
+    <height>695</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>musicapp</string>
+   <string>Music CDs</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
-  <widget class="QMenuBar" name="menubar"/>
+  <property name="windowIcon">
+   <iconset resource="src.qrc">
+    <normaloff>:/images/cd.png</normaloff>:/images/cd.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#centralwidget {
+	border-image: url(:/images/musicbackground.jpg)
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="topPanel" native="true">
+    <property name="geometry">
+     <rect>
+      <x>-1</x>
+      <y>0</y>
+      <width>941</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#topPanel {
+	background-color: white
+}</string>
+    </property>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>0</y>
+       <width>431</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Noto Sans Kayah Li</family>
+       <pointsize>24</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Your Own Music Library</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="appIcon" native="true">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>0</y>
+       <width>120</width>
+       <height>80</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#appIcon {
+	border-image: url(:/images/sol-key.jpg)
+}</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QTableWidget" name="musicTable">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>90</y>
+      <width>691</width>
+      <height>341</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#musicTable {
+	background-color: #C0C0C0;
+	alternate-background-color: #606060;
+	selection-background-color: #282828;
+}</string>
+    </property>
+    <property name="editTriggers">
+     <set>QAbstractItemView::NoEditTriggers</set>
+    </property>
+    <attribute name="horizontalHeaderStretchLastSection">
+     <bool>true</bool>
+    </attribute>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>440</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Add New CD</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="cdicon" native="true">
+    <property name="geometry">
+     <rect>
+      <x>760</x>
+      <y>440</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#cdicon {
+	border-image: url(:/images/cd.png)
+}</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>938</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="src.qrc"/>
+ </resources>
  <connections/>
 </ui>
