@@ -18,7 +18,12 @@ class musicapp : public QMainWindow
 
 public:
     musicapp(QWidget *parent = nullptr);
+    void updateCDsTable();
     ~musicapp();
+
+private slots:
+    void on_search_button_clicked();
+    void on_pushButton_clicked();
 
 private:
     Ui::musicapp *ui;
